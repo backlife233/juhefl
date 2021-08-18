@@ -1,0 +1,100 @@
+.modal[data-drag="draged"] .modal-dialog {
+    margin: 0;
+    position: absolute;
+}
+
+.modal-header {
+    cursor: default;
+}
+
+.alert-container {
+    position: fixed;
+}
+
+.alert-container .alert {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+#alert-container-topleft {
+    top: 10px;
+    left: 10px;
+}
+
+#alert-container-topcenter {
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#alert-container-topright {
+    top: 10px;
+    right: 10px;
+}
+
+#alert-container-bottomleft {
+    bottom: 10px;
+    left: 10px;
+}
+
+#alert-container-bottomcenter {
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#alert-container-bottomright {
+    bottom: 10px;
+    right: 10px;
+}
+
+#alert-container-center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*custom*/
+.custom-modal .modal-header button {
+    width: auto;
+}
+
+.custom-modal .modal-footer button {
+    width: auto;
+}
+
+.custom-modal .btn-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.custom-modal .btn-secondary {
+    background-color: var(--color-gray);
+    border-color: var(--color-gray);
+}
+
+body.active-dark-mode .custom-modal .modal-content {
+    background: #242424;
+}
+
+body.active-dark-mode .custom-modal .modal-header {
+    border-bottom-color: #38393a;
+}
+
+body.active-dark-mode .custom-modal .modal-footer {
+    border-top-color: #38393a;
+}
+
+
+.custom-alert button.close,
+.custom-modal button.close {
+    width: auto;
+    text-shadow: unset;
+    padding-top: 15px;
+    color: inherit;
+}
+
+body.active-dark-mode .custom-alert {
+    background: #242424;
+    border-color: #242424;;
+}
+
