@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     @isset($title)
-        <title>{{$title}} | {{config('website_name')}} | {{safe_str('86下山了！')}}</title>
+        <title>{{$title}} | {{config('website_name')}} | {{safe_str('聚合优质站点！')}}</title>
     @else
-        <title>{{config('website_name')}} | {{safe_str('86下山了！')}}</title>
+        <title>{{config('website_name')}} | {{safe_str('聚合优质站点！')}}</title>
     @endif
     @isset($keyword)
         <meta name="keyword" content="{{$keyword}}">
