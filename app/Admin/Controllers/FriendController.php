@@ -129,10 +129,6 @@ class FriendController extends AdminController
         $form->number('all_out', __('All out'))->default(0);
         $form->textarea('info', __('Info'));
 
-//        $form->saving(function (Form $form) {
-//            $form->domain = parse_url($form->link)['host'] ?? null;
-//        });
-
         return $form;
     }
 }
