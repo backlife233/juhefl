@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use App\Admin\Actions\BatchCreateFriends;
 use App\Models\Friend;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
@@ -36,7 +37,7 @@ class FriendController extends AdminController
         $grid->column('friend_id', __('Friend id'));
         $grid->column('user_id', __('User id'));
         $grid->column('user.name', __('User Name'));
-        $grid->column('ico', __('Icon'))->image(null,50,50);
+        $grid->column('ico', __('Icon'))->image(null, 50, 50);
         $grid->column('name', __('Name'));
         $grid->column('link', __('Link'));
         $grid->column('domain', __('Domain'));
@@ -59,6 +60,11 @@ class FriendController extends AdminController
 
         $grid->filter(function ($filter) {
             $filter->equal('user_id');
+        });
+
+
+        $grid->tools(function (Grid\Tools $tools) {
+            $tools->append(new BatchCreateFriends());
         });
 
         return $grid;
@@ -123,9 +129,9 @@ class FriendController extends AdminController
         $form->number('all_out', __('All out'))->default(0);
         $form->textarea('info', __('Info'));
 
-        $form->saving(function (Form $form) {
-            $form->domain = parse_url($form->link)['host'] ?? null;
-        });
+//        $form->saving(function (Form $form) {
+//            $form->domain = parse_url($form->link)['host'] ?? null;
+//        });
 
         return $form;
     }

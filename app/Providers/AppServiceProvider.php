@@ -3,9 +3,9 @@
 namespace App\Providers;
 
 use App\Models\Category;
-use App\Models\Post;
+use App\Models\Friend;
 use App\Observers\ConfigModelObserver;
-use App\Observers\PostObserver;
+use App\Observers\FriendObserver;
 use Encore\Admin\Config\ConfigModel;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Schema;
@@ -41,7 +41,6 @@ class AppServiceProvider extends ServiceProvider
             config([$config['name'] => $config['value']]);
         }
 
-        Post::observe(PostObserver::class);
         ConfigModel::observe(ConfigModelObserver::class);
     }
 }

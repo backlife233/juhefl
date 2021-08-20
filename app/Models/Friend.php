@@ -29,6 +29,11 @@ class Friend extends BaseModel
         return self::STATUS_STR[$this->status] ?? '未知';
     }
 
+    public function setDomainAttribute()
+    {
+        $this->attributes['domain'] = parse_url($this->link)['host'] ?? null;
+    }
+
     public function user()
     {
         return $this->belongsTo(User::class);
