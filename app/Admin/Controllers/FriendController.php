@@ -55,6 +55,8 @@ class FriendController extends AdminController
         $grid->quickCreate(function (Grid\Tools\QuickCreate $create) {
             $create->text('name', __('Name'));
             $create->text('link', __('Link'));
+            $create->text('domain', __('Domain'))->default('');
+            $create->integer('status')->default(1);
             $create->select('category', __('Category'))->options(Friend::CATEGORY);
         });
 
