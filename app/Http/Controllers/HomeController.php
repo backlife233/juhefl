@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $friends    = Friend::orderByDesc('come')->get();
+        $friends    = Friend::orderByDesc('sort')->orderByDesc('come')->get();
         $categories = Friend::CATEGORY;
 
         return view('friend.index', compact('friends', 'categories'));

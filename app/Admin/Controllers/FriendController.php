@@ -41,14 +41,14 @@ class FriendController extends AdminController
         $grid->column('name', __('Name'));
         $grid->column('link', __('Link'));
         $grid->column('domain', __('Domain'));
-        $grid->column('sort', __('Sort'));
+        $grid->column('sort', __('Sort'))->sortable()->editable();
         $grid->column('status', __('Status'))->switch($options);
         $grid->column('lock', __('Lock'))->switch($options);
         $grid->column('category', __('Category'))->editable('select', Friend::CATEGORY);
-        $grid->column('come', __('Come'));
-        $grid->column('all_come', __('All come'));
-        $grid->column('out', __('Out'));
-        $grid->column('all_out', __('All out'));
+        $grid->column('come', __('Come'))->sortable()->editable();
+        $grid->column('all_come', __('All come'))->sortable()->editable();
+        $grid->column('out', __('Out'))->sortable()->editable();
+        $grid->column('all_out', __('All out'))->sortable()->editable();
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 
