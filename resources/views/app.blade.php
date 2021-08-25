@@ -35,19 +35,14 @@
     @yield('css')
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}?{{get_version()}}">
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-198013182-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-205886969-2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
+        function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'UA-198013182-1');
+        gtag('config', 'UA-205886969-2');
     </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-23E8YGJ3D5"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
